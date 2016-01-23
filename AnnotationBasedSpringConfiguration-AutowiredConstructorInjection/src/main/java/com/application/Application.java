@@ -25,11 +25,11 @@ public class Application {
 			System.out.println(student.getFirstName()+" "+student.getLastName());
 		}
 		
-		/*ApplicationContext appContext1=new ClassPathXmlApplicationContext("beans.xml");
+		ApplicationContext appContext1=new ClassPathXmlApplicationContext("beans.xml");
 		Classroom class11=appContext.getBean("class10", Classroom.class);
 		for(Student student:class10.view()){
 			System.out.println(student.getFirstName()+" "+student.getLastName());
-		}*/
+		}
 	}
 
 }
