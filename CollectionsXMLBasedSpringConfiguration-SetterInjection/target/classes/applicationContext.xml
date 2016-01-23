@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <context:property-placeholder location="student.properties" />
+	<bean id="studentDAO" class="com.application.dao.StudentDAOImpl" ></bean>
+	
+	<!--  <bean id="class10" class="com.application.bl.Class10">
+	   <property name="studentDao" ref="studentDAO"></property>
+	</bean>-->
+	
+	<bean id="class10" class="com.application.bl.Class10" lazy-init="true" init-method="init">
+	   <property name="studentDao">
+	    <null />
+	   </property>
+	</bean>
+	
+	<bean id="student1" class="com.application.data.Student">
+	  <constructor-arg index="0" value="${firstName}"></constructor-arg>
+	  <constructor-arg index="1" value="${lastName}"></constructor-arg>
+	</bean>
+	<bean id="student2" class="com.application.data.Student">
+	 <constructor-arg index="0" value="${firstName1}"></constructor-arg>
+	 <constructor-arg index="1" value="${lastName1}"></constructor-arg>
+	</bean>
+	<bean id="student3" class="com.application.data.Student">
+	 <constructor-arg index="0" value="${firstName2}"></constructor-arg>
+	 <constructor-arg index="1" value="${lastName2}"></constructor-arg>
+	</bean>
+	
+	<bean id="class11" class="com.application.bl.Class10">
+	   <property name="studentList">
+	      <list>
+	         <ref bean ="student1"/>
+	         <ref bean="student2"/>
+	         <ref bean="student3"/>
+	         <bean  class="com.application.data.Student">
+					  <constructor-arg index="0" value="${firstName3}"></constructor-arg>
+		 			  <constructor-arg index="1" value="${lastName3}"></constructor-arg>
+			 </bean>			 
+	      </list>
+	   </property>
+	   <property name="nationality">
+          <list>
+             <value type="java.lang.String">India</value>
+             <value type="java.lang.String">US</value>
+             <value type="java.lang.String">Russia</value>
+             <value type="java.lang.String">Korea</value>
+             <value type="java.lang.String">Australia</value>
+             <value type="java.lang.String">Iceland</value>
+          </list>	   
+	   </property>
+	   <property name="studentNationList">
+	    <list>
+	      <map>
+	       <entry key-ref="student1" value="India"></entry>
+	       <entry key-ref="student2" value="US"></entry>
+	       <entry key-ref="student3" value="Australia"></entry>	       
+	      </map>	      
+	    </list>
+	   </property>
+	   <property name="propEmail">
+	     <props>
+	       <prop key="India">abdul@india.com</prop>
+	       <prop key="US">abdul@us.com</prop>
+	       <prop key="Australia">abdul@australia.com</prop>
+	     </props>
+	   </property>
+	</bean>
+</beans>
