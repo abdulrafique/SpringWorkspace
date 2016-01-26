@@ -14,6 +14,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+
 # Windows shortcuts
 *.lnk
 
@@ -46,35 +47,17 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .metadata/
-BeanScopeXMLBasedSpringConfiguration-SetterInjection/target/
-AnnotationBasedSpringConfiguration-AutowiredConstructorInjection/target/
-XMLBasedSpringConfiguration-autowire/target/
-BeanScopeAnnotationBasedSpringConfiguration-AutowiredSetterInjection/target/
-CollectionsXMLBasedSpringConfiguration-SetterInjection/target/
-XMLBasedSpringConfiguration-SetterInjection/target/
-XMLBasedSpringConfiguration-ConstructorInjection/target/
-JavaSpringConfiguration-AutowiredConstructorInjection/target/
-BeanLifeCycleXMLBasedSpringConfiguration-SetterInjection/target/
-AnnotationBasedSpringConfiguration-AutowiredSetterInjection/target/
-AnnotationBasedSpringConfiguration-AutowiredConstructorInjection/.classpath
-AnnotationBasedSpringConfiguration-AutowiredSetterInjection/.classpath
-BeanLifeCycleXMLBasedSpringConfiguration-SetterInjection/.classpath
-BeanScopeAnnotationBasedSpringConfiguration-AutowiredSetterInjection/.classpath
-BeanScopeXMLBasedSpringConfiguration-SetterInjection/.classpath
-ClassApplicationDemo/.classpath
-CollectionsXMLBasedSpringConfiguration-SetterInjection/.classpath
-JavaSpringConfiguration-AutowiredConstructorInjection/.classpath
-XMLBasedSpringConfiguration-autowire/.classpath
-XMLBasedSpringConfiguration-ConstructorInjection/.classpath
-XMLBasedSpringConfiguration-SetterInjection/.classpath
-AnnotationBasedSpringConfiguration-AutowiredConstructorInjection/.project
-AnnotationBasedSpringConfiguration-AutowiredSetterInjection/.project
-BeanLifeCycleXMLBasedSpringConfiguration-SetterInjection/.project
-BeanScopeAnnotationBasedSpringConfiguration-AutowiredSetterInjection/.project
-BeanScopeXMLBasedSpringConfiguration-SetterInjection/.project
-ClassApplicationDemo/.project
-CollectionsXMLBasedSpringConfiguration-SetterInjection/.project
-JavaSpringConfiguration-AutowiredConstructorInjection/.project
-XMLBasedSpringConfiguration-autowire/.project
-XMLBasedSpringConfiguration-ConstructorInjection/.project
-XMLBasedSpringConfiguration-SetterInjection/.project
+
+#################
+# Files
+#################
+*.class
+*.classpath
+*.project
+*.settings
+*.springBeans
+#################
+# Directories
+#################
+target/
+bin/
